@@ -1,0 +1,28 @@
+.dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--color-areia);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+}
+
+.ring {
+  position: fixed;
+  width: var(--ring-size, 24px);
+  height: var(--ring-size, 24px);
+  border-radius: 9999px;
+  border: 1px solid var(--ring-color, #f0ebe0);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: var(--z-cursor);
+}
+
+@media (pointer: coarse) {
+  .dot,
+  .ring {
+    display: none;
+  }
+}

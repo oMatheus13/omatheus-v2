@@ -161,6 +161,16 @@ body {
   cursor: none !important;
 }
 
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+}
+
 img,
 video,
 svg {

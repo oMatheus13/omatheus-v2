@@ -1,0 +1,8 @@
+.leak {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.12;
+}

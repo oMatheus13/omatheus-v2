@@ -13,7 +13,9 @@ export default defineConfig({
       '@lib': path.resolve(__dirname, './src/lib'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@data': path.resolve(__dirname, './src/data'),
-      '@types': path.resolve(__dirname, './src/types')
+      '@types': path.resolve(__dirname, './src/types'),
+      'zustand/shallow': path.resolve(__dirname, './node_modules/zustand/shallow.js'),
+      'bidi-js': path.resolve(__dirname, './node_modules/bidi-js/dist/bidi.min.mjs')
     }
   },
   assetsInclude: ['**/*.glb', '**/*.gltf']

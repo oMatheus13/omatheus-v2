@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Header from '@components/layout/Header/Header'
 import Footer from '@components/layout/Footer/Footer'
+import GrainOverlay from '@components/ui/GrainOverlay/GrainOverlay'
+import CustomCursor from '@components/ui/CustomCursor/CustomCursor'
 import Home from '@pages/Home'
 import Sobre from '@pages/Sobre'
 import Fragmentos from '@pages/Fragmentos'
@@ -28,6 +30,8 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
+      <GrainOverlay />
+      <CustomCursor />
       <Header />
       <main>
         <AnimatedRoutes />

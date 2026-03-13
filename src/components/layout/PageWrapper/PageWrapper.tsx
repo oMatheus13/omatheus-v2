@@ -1,5 +1,7 @@
+import { useLayoutEffect } from 'react'
 import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
+import { ScrollTrigger } from '@lib/gsap'
 
 const pageVariants = {
   initial: { opacity: 0, y: 20 },
@@ -12,6 +14,13 @@ const pageVariants = {
 }
 
 export default function PageWrapper({ children }: { children: ReactNode }) {
+  useLayoutEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      ScrollTrigger.refresh()
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [])
+
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
       {children}
